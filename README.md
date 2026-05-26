@@ -47,14 +47,8 @@ npm install -g @thinkscape/smart-fetch
 
 ### 2. Install the plugin
 
-**Option A — Symlink (recommended for development):**
 ```bash
-ln -s ~/Documents/projects/hermes-smart-fetch ~/.hermes/plugins/hermes-smart-fetch
-```
-
-**Option B — hermes plugins install:**
-```bash
-hermes plugins install ~/Documents/projects/hermes-smart-fetch --enable
+hermes plugins install alexandrustefan/hermes-smart-fetch --enable
 ```
 
 ### 3. Configure as extract backend
