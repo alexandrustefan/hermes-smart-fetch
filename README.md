@@ -17,6 +17,22 @@ Hermes Agent plugin that wraps [@thinkscape/smart-fetch](https://github.com/Thin
 
 > The only extract backend that is **local, unlimited, and Cloudflare-proof** — zero API keys, zero credits, zero rate limits.
 
+### Defuddle vs bs4 (what Hermes built-in http-fetch uses)
+
+Tested on the same real pages — Hacker News comments and Cloudflare Blog:
+
+| | **bs4 + markdownify** | **Defuddle** |
+|---|---|---|
+| **Cloudflare Blog — signal** | 68 lines, mostly nav chrome ("Subscribe", "Get Started Free", "Contact Sales", magnifier icons) | 22 lines — all article excerpts, zero chrome |
+| **Hacker News — quality** | Table-layout junk, login links, "new \| past \| comments \| submit" nav injected | Clean threaded comments with usernames, timestamps, full nesting |
+| **Author extraction** | ❌ | ✅ |
+| **Published date** | ❌ | ✅ |
+| **Schema.org metadata** | ❌ | ✅ |
+| **Site-specific extractors** | ❌ (generic) | ✅ HN, Reddit, YouTube, GitHub, X/Twitter, Substack etc. |
+| **Footnotes / code blocks / math** | ❌ falls apart | ✅ consistent output |
+
+**bs4** is a DOM parser — you build extraction on top. **Defuddle** is an extraction engine, purpose-built for Obsidian Web Clipper with site-specific optimizations, ML-noise removal, and schema.org parsing. Same gap as using raw SQL vs an ORM.
+
 ## Features
 
 - 🔐 **Browser-like TLS/SSL + HTTP fingerprints** — bypasses Cloudflare, Akamai, and other bot defenses
