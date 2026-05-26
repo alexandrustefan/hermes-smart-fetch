@@ -4,14 +4,18 @@
 
 Hermes Agent plugin that wraps [@thinkscape/smart-fetch](https://github.com/Thinkscape/agent-smart-fetch) CLI to give your agent a local, unlimited, Cloudflare-friendly web extraction backend.
 
+## Why this over anything else
+
 | | Tavily | Firecrawl | http-fetch | **hermes-smart-fetch** |
 |---|---|---|---|---|
-| **Cloudflare bypass** | ❌ | ✅ (headless Chrome) | ❌ | ✅ (TLS fingerprinting) |
-| **Clean extraction** | ✅ | ✅ | ✅ (bs4) | ✅ (Defuddle) |
+| **Cloudflare bypass** | ❌ blocked often | ✅ headless Chrome | ❌ plain HTTP | ✅ TLS fingerprinting |
+| **Clean extraction** | ✅ | ✅ | ✅ bs4 | ✅ Defuddle |
 | **API key required** | ✅ | ✅ | ❌ | ❌ |
-| **Rate limits** | 1,000/mo free | 500/mo free | Unlimited | Unlimited |
-| **Cost** | Paid tiers | Paid tiers | Free | Free |
-| **Runs locally** | ❌ | ❌ | ✅ | ✅ |
+| **Rate limits** | 1,000/mo | 500/mo | none | none |
+| **Cost** | paid tiers | paid tiers | free | free |
+| **Runs locally** | ❌ remote API | ❌ remote API | ✅ | ✅ |
+
+> The only extract backend that is **local, unlimited, and Cloudflare-proof** — zero API keys, zero credits, zero rate limits.
 
 ## Features
 
