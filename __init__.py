@@ -191,7 +191,7 @@ def register(context) -> None:
         context.register_web_search_provider(provider)
         logger.info(
             "hermes-smart-fetch: registered web provider '%s' "
-            "(extract_backend available)",
+            '(web.extract_backend: hermes-smartfetch)',
             provider.name,
         )
     except Exception as exc:

@@ -16,7 +16,6 @@ import re
 import shutil
 import subprocess
 from dataclasses import dataclass, field
-from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 logger = logging.getLogger(__name__)
@@ -243,11 +242,7 @@ def smart_fetch(
     logger.info("smart-fetch: %s", " ".join(full_cmd[:6]) + " ...")
 
     try:
-        # Build env with PATH augmented for npx
         env = os.environ.copy()
-        node_bin = str(Path.home() / ".nvm" / "versions" / "node" / "v23.5.0" / "bin")
-        if node_bin not in env.get("PATH", ""):
-            env["PATH"] = node_bin + ":" + env.get("PATH", "")
 
         proc = subprocess.run(
             full_cmd,

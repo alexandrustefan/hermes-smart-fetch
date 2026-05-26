@@ -62,8 +62,8 @@ hermes plugins install ~/Documents/projects/hermes-smart-fetch --enable
 ```yaml
 # ~/.hermes/config.yaml
 web:
-  backend: ddgs            # search backend (stays as-is)
-  extract_backend: smartfetch  # extract via smart-fetch
+  backend: ddgs                # search backend (stays as-is)
+  extract_backend: hermes-smartfetch  # extract via smart-fetch
 ```
 
 ### 4. Restart Hermes

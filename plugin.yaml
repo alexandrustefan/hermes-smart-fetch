@@ -3,7 +3,7 @@
 # Install: hermes plugins install /path/to/hermes-smart-fetch --enable
 # Or symlink: ln -s /path/to/hermes-smart-fetch ~/.hermes/plugins/hermes-smart-fetch
 
-name: hermes-smart-fetch
+name: hermes-smartfetch
 version: 0.1.0
 description: >
   Local web extraction with browser-grade TLS fingerprinting and Defuddle

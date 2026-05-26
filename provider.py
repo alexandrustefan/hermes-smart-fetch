@@ -30,7 +30,7 @@ class SmartFetchWebSearchProvider(WebSearchProvider):
 
     @property
     def name(self) -> str:
-        return "smartfetch"
+        return "hermes-smartfetch"
 
     @property
     def display_name(self) -> str:
@@ -137,7 +137,7 @@ class SmartFetchWebSearchProvider(WebSearchProvider):
     def get_setup_schema(self) -> Dict[str, Any]:
         """Return provider metadata for the ``hermes tools`` picker."""
         return {
-            "name": "Smart Fetch (local)",
+            "name": "hermes-smartfetch",
             "badge": "free",
             "tag": "Local, no API key — TLS fingerprinting + Defuddle extraction.",
             "env_vars": [],
