@@ -53,11 +53,15 @@ hermes plugins install alexandrustefan/hermes-smart-fetch --enable
 
 ### 3. Configure as extract backend
 
+```bash
+hermes config set web.extract_backend hermes-smartfetch
+```
+
+Or manually in `~/.hermes/config.yaml`:
+
 ```yaml
-# ~/.hermes/config.yaml
 web:
-  backend: ddgs                # search backend (stays as-is)
-  extract_backend: hermes-smartfetch  # extract via smart-fetch
+  extract_backend: hermes-smartfetch
 ```
 
 ### 4. Restart Hermes
